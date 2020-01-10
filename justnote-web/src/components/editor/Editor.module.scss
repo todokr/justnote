@@ -1,0 +1,119 @@
+@import "../../../node_modules/draft-js/dist/Draft";
+@import "../../../node_modules/draftail/dist/draftail";
+
+@import "../../Base";
+
+.editor {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 16px;
+}
+
+.breadCrumb {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 16px;
+
+  color: $gray-800;
+
+  &, li {
+    list-style: none;
+  }
+
+  li {
+    &:before {
+      content: '/';
+      margin: 0 8px;
+      color: $gray-600;
+    }
+  }
+}
+
+.headerMenu {
+  display: flex;
+  align-items: center;
+}
+
+.viewingUsers {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 8px;
+  margin: 0;
+
+  &, li {
+    list-style: none;
+  }
+
+  li {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px $white solid;
+    margin-left: -8px;
+  }
+}
+
+.shareBtn {
+  margin-left: 16px;
+}
+
+.moreBtn {
+  display: flex;
+  color: $gray-600;
+  font-size: 1.4rem;
+}
+
+.article {
+  width: 880px;
+  padding: 24px 0;
+  flex-basis: 100%;
+  font-size: 16px;
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4 {
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
+.titleInput {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2.4em;
+  margin-bottom: 16px;
+  color: $gray-800;
+
+  &::placeholder {
+    color: $gray-400;
+  }
+}

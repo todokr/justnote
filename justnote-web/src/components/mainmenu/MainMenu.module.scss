@@ -1,0 +1,99 @@
+@import "../../Base";
+
+.mainMenu {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+  background: $menu-bg;
+  color: $white;
+}
+
+.primaryMenu {
+  flex-grow: 0;
+}
+
+.secondaryMenu {
+  padding-bottom: 16px;
+  flex-grow: 0;
+}
+
+.user {
+  padding: 16px 16px 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+  
+  .thumbnail {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .userName {
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.searchNotes {
+  padding: 24px 16px 20px;
+
+  input {
+    width: 100%;
+    background: darken($menu-bg, 3%);
+    box-shadow: 0 0 2px rgba(0,0,0,0.2) inset;
+    color: $white;
+
+    &::placeholder {
+      color: $gray-700;
+    }
+  }
+}
+
+.newNote, .allNotes, .archive, .setting {
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $white;
+    padding: 8px 16px;
+
+    &:hover {
+      color: $white;
+      background: darken($menu-bg, 3%);
+    }
+  }
+}
+
+.addIcon {
+  color: $green;
+}
+
+.documentIcon, .archiveIcon, .settingIcon {
+  color: $gray-700;
+}
+
+.addIcon, .documentIcon, .archiveIcon, .settingIcon {
+  font-size: 1.2rem;
+  margin-right: 4px;
+}
+
+.fileNodes {
+  margin: 18px 0;
+  flex-grow: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display:none;
+  }
+}
+
+
+

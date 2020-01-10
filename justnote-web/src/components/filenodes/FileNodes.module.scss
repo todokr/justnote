@@ -1,0 +1,83 @@
+@import "../../Base";
+
+.fileNodes {
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .topLevelList {
+
+  }
+
+  li li {
+    margin-left: 1rem;
+  }
+
+  li a {
+    padding: 4px 16px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.directory {
+
+}
+
+.arrowIcon {
+  transform: rotateZ(0);
+}
+
+.directoryOpen {
+  .arrowIcon {
+    transform: rotateZ(90deg);
+  }
+}
+
+.directoryItem, .fileItem {
+  display: flex;
+  align-items: center;
+  color: $white;
+
+  &:hover {
+    background: $menu-bg-hover;
+    color: $white;
+  }
+}
+
+.directoryTitle, .fileTitle {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+}
+
+.openBtn, .addBtn {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 3px;
+
+  &:hover {
+    background: darken($menu-bg-hover, 3%);
+  }
+}
+
+.addBtn {
+  visibility: hidden;
+}
+
+.directoryItem:hover, .fileItem:hover {
+  .addBtn {
+    visibility: visible;
+  }
+}
+
